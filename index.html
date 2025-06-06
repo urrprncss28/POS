@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Entry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2 class="form-title">Point of Sales</h2>
+
+    <div class="input-row">
+        <div class="input-group">
+            <label>Product Name:</label>
+            <textarea id="product_name" rows="3" required></textarea>
+        </div>
+        <div class="input-group">
+            
+            <label>Quantity:</label>
+            <input type="number" id="qty" required>
+        </div>
+
+        <div class="input-group">
+            <label>Price:</label>
+            <input type="number" step="0.01" id="price" required>
+        </div>
+    </div>
+
+    <button type="button" id="addProductBtn">Add Product</button>
+
+    <div class="product-list">
+        <h3>Products:</h3>
+        <ul id="productList"></ul>
+    </div>
+
+    <div class="keypad">
+        <button class="key">1</button>
+        <button class="key">2</button>
+        <button class="key">3</button>
+        <button class="key">4</button>
+        <button class="key">5</button>
+        <button class="key">6</button>
+        <button class="key">7</button>
+        <button class="key">8</button>
+        <button class="key">9</button>
+        <button class="key">0</button>
+        <button class="key">.</button>
+        <button class="key-clear">CLEAR</button>
+    </div>
+
+    <div class="summary">
+        <label>Total Items:</label>
+        <input type="text" id="total_items" readonly>
+
+        <label>Total Amount:</label>
+        <input type="text" step="0.01" id="total_amount" readonly>
+    </div>
+
+    <form id="stockForm">
+        <div class="btn-group">
+            <button type="button" id="cancelBtn">Cancel</button>
+            <button type="button" id="holdBtn">Hold</button>
+            <button type="submit" id="paymentBtn">Payment</button>
+        </div>
+    </form>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
